@@ -1,0 +1,93 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+<!-- <input/> dentro do html serve para abrir uma espécie de caixinha para escrever dentro
+<button> é um botão-->
+<script>
+
+function sorteia(){
+    return Math.round(Math.random() * 10);
+}
+
+function sorteiaNumeros(quantidade){
+    var segredos = [];
+    var numero = 1;
+
+    while(numero <= quantidade){
+
+        var numeroAleatorio = sorteia();
+        var achou = false;
+
+        if(numeroAleatorio !== 0){
+
+            for(var posicao = 0; posicao < segredos.length; posicao++){
+
+                if(segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
+                }
+            }
+    
+            if(achou == false){
+                segredos.push(numeroAleatorio);
+                numero++;
+            }
+        }
+    
+    }
+
+    return segredos;
+}
+
+var segredos = sorteiaNumeros(3);
+
+// var segredos = [];
+//o colchetes [] se chama "array" e deve ser sempre declarado com palavras no plural
+//a contagem para exibição dentro do ARRAY começa com 0,1,2,3...
+//DECLARAR OS NUMEROS OU O QUE VC QUISER DENTRO DO ARRAY SÓ SERVE P QUANDO VC
+//JA SABE QUAIS SÃO ELES
+//QUANDO NÃO SOUBER DEVE DEIXAR OS COLCHETES VAZIOS E CHAMAR A VARIAVEL COM O PUSH
+// segredos.push(sorteia);
+// segredos.push(sorteia);
+// segredos.push(sorteia);
+// segredos.push(sorteia);
+// segredos.push(sorteia);
+
+//PUSH serve para empurrar p dentro do array o que vc quiser (declarar dentro do colchetes)
+
+
+var input = document.querySelector("input");
+//querySelector chama o que ele quer trabalhar do HTML para o JAVASCRIPT
+input.focus();
+
+function verifica (){
+
+    var achou = false;
+
+    for(var posicao = 0;posicao < segredos.length;posicao++){
+        // length, retorna a quantidades de elemntos(casas) que ele tem na variavel 'segredos'
+        if(input.value == segredos [posicao]){
+
+            alert("Você acertou!");
+            achou = true;
+            break;
+            }
+    }
+        if(achou == false){
+            alert("Você errou");
+
+        }
+   
+
+        input.value = "";
+        // string vazia limpou a caixinha depois de uma nova tentativa
+        input.focus();
+        //focua faz com que a caixinha ja fique no focu para digitar o que quiser
+        //sem precisar clicar novamente
+}
+
+var button = document.querySelector("button");
+button.onclick = verifica;
+
+</script>

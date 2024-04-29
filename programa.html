@@ -1,0 +1,121 @@
+<meta charset="UTF-8"> 
+
+<script>
+
+
+    document.write("Flávio nasceu em ");
+    document.write(2016 - 39);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("A soma das idades é " + (20 + 10 + 30)/3);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Flávio tem " + (2016 - 1977) + " anos ");
+    document.write("<br>");
+    document.write("Joaquim tem " + (2016 - 1996) + " anos ");
+    document.write("<br>");
+    document.write("Barney tem " + (2016 - 1976) + " anos ");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+
+
+    function pulaLinha(){
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+    //a função FUNCTION cria uma funcionalidade personalizada e deve vir logo no inicio
+    //daí é so declarar o nome da função que ele irá executar o que vc colocou
+    // dentro dela ou seja dentro das {}
+
+    function mostra(){
+
+        document.write("Olá");
+        
+    }
+
+    function exibir(frase){
+
+        document.write(frase);
+        pulaLinha();
+        
+    }
+    //uma função pode chamar o comando de outra função
+    //exemplo: dentro desta FUNCTION EXIBIR vou chamar a FUNCTION PULAlINHA para pular linha 
+    //sempre que a FUNCTION EXIBIR for acionada
+
+    var ano = 2016;
+    //o var é para declarar a variavel o nome -->
+
+    mostra();
+    pulaLinha();
+
+    document.write("Flávio tem " + (ano - 1977) + " anos ");
+
+    pulaLinha();
+    mostra();
+    pulaLinha();
+
+    document.write("Joaquim tem " + (ano - 1996) + " anos ");
+
+    pulaLinha();
+    mostra();
+    pulaLinha();
+
+    ano = 2018;
+    document.write("Barney tem " + (ano - 1976) + " anos ");
+    pulaLinha();
+
+
+    
+    var idadeFlavio = 39;
+    var idadeJoaquim = 20;
+    var idadeBarney = 41;
+    var media = (idadeFlavio + idadeJoaquim + idadeBarney/3);
+    document.write("a média das idades é " + Math.round (media));
+    //Math.round é para arredondar a conta -->
+
+    pulaLinha();
+
+    var nome = "Flávio";
+    document.write("A idade de " + nome + " é " + idadeFlavio);
+
+
+    pulaLinha();
+    pulaLinha();
+    //aqui começa outro
+    var ano = 2016;
+
+    exibir("Flávio tem " + (ano - 1977) + " anos ");
+
+   
+
+    exibir("Joaquim tem " + (ano - 1996) + " anos ");
+
+    
+
+    exibir("Barney tem " + (ano - 1976) + " anos ");
+    
+    pulaLinha();
+    pulaLinha();
+    
+
+    document.write("vamos de tabuada");
+    pulaLinha();
+
+    var tabuada = 8;
+    document.write(tabuada + " vezes 1 é " + tabuada * 1 + "<br>");
+    document.write(tabuada + " vezes 2 é " + tabuada * 2 + "<br>");
+    document.write(tabuada + " vezes 3 é " + tabuada * 3 + "<br>");
+    document.write(tabuada + " vezes 4 é " + tabuada * 4 + "<br>");
+    document.write(tabuada + " vezes 5 é " + tabuada * 5 + "<br>");
+    document.write(tabuada + " vezes 6 é " + tabuada * 6 + "<br>");
+    document.write(tabuada + " vezes 7 é " + tabuada * 7 + "<br>");
+    document.write(tabuada + " vezes 8 é " + tabuada * 8 + "<br>");
+    document.write(tabuada + " vezes 9 é " + tabuada * 9 + "<br>");
+    document.write(tabuada + " vezes 10 é " + tabuada * 10 + "<br>");
+   
+   
+</script>

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+var numeroPensado = Math.round( Math.random() * 10);
+
+var tentativas = 1;
+
+    while(tentativas <= 3){
+    var chute = parseInt(prompt("Digite seu chute!"));
+
+    if(chute == numeroPensado){
+        mostra("Você acertou, o número pensado era " + numeroPensado);
+        break;
+        //BREAK serve para quebrar o looping do WHILE ou FOR quando a pessoa acertar algo
+        //antes das tentativas acabarem
+
+    } else {
+        mostra("Você errou!");
+
+    }
+    tentativas++;
+ }
+ mostra("FIM");
+
+//IF se for tal imprima isso
+//ELSE senão informe isso
+</script>

@@ -1,0 +1,38 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey'; //fundo da tela
+    pincel.fillRect(0, 0, 600, 400); //tamanhoda tela
+    var raio = 10; 
+
+    function desenhaCirculo(evento) { //nome do que eu quero que a função faça
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        
+        if (evento.shiftKey && evento.altKey){ //se o usuario apertar a tecla shift e alt juntos
+            
+            alert('Só apertar uma tecla por vez!') // exibe esse alerta
+          
+        } else if(evento.shiftKey && raio + 10 <= 40){ //se apertar shift vai aumentar +10 até no maximo 40
+            raio = raio + 10; //aqui o raio passa a valer sempre + 10 sempre que clicar no shift
+
+        } else if(evento.altKey && raio - 5 >= 10){//se apertar alt vai diminuir 5 até no minimo 10
+            raio = raio - 5; //raio aqui chama - 5 
+        }
+
+        pincel.fillStyle = 'blue'; //cor do circulo
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14); // tamanho do circulo sem executar o IF
+        pincel.fill();
+
+        //alert(x + ',' + y);
+    }
+
+    tela.onclick = desenhaCirculo; //comando para o uruario fazer p aparecer a função
+
+</script>
